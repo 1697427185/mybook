@@ -1,0 +1,40 @@
+.VPHome {
+
+  // 自定义首页背景图
+  &::before {
+    // 图片来源：https://zhuanlan.zhihu.com/p/54060187
+    background-image: url(./assets/2.jpg);
+    background-size: cover;
+  }
+
+  // 定义遮罩样式
+  background: radial-gradient(ellipse,
+    rgba(var(--bg-gradient-home), 1) 0%,
+    rgba(var(--bg-gradient-home), 0) 120%);
+}
+
+.name {
+  transition: all 5s ease;
+  // background: -o-linear-gradient(left, #2A9CF5, #6BDEF5, #A5D060, #00BA90, #2A9CF5);
+  // background: -webkit-linear-gradient(left, #2A9CF5, #6BDEF5, #A5D060, #00BA90, #2A9CF5);
+  background: -o-linear-gradient(left, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+  background: -webkit-linear-gradient(left, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-animation: dancingColors 5s infinite forwards ease-in-out;
+  animation: dancingColors 5s infinite forwards ease-in-out;
+}
+
+@-webkit-keyframes dancingColors {
+  50% {
+    background-position: -860px;
+  }
+}
+
+@keyframes dancingColors {
+  50% {
+    background-position: -860px;
+  }
+}
